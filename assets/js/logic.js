@@ -66,9 +66,17 @@
         // Function to end the quiz
         function endQuiz() 
         {
-        clearInterval(timerInterval);// clear timer if any time left
+        clearInterval(timerInterval);
+        questionsContainer.classList.add("hide");
+        endScreen.classList.remove("hide");
+        finalScoreElement.textContent = 50;
+        // console.log(timeLeft);
+
+        submitButton.addEventListener("click", function () 
+        {
+        const initials = initialsInput.value.trim();
+        });
         }
-        
         startQuiz();
         });
 
