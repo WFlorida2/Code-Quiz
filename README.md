@@ -1,9 +1,10 @@
 # Code-Quiz
+HUGE credit to W3C school, classes recording AND ChatGPT for many and different examples of codes
 
 ## pseudocode
 
 1. Declare variables:
-   - timer , score , highscore
+   - timeRemaining ,timeInterval, score , highscore, questions
 
 2. Set up event listeners:
    A - When start button is clicked:
@@ -40,3 +41,12 @@
     
     J  - When clear button is clicked:
        - Clear the high scores
+
+3.  Create functions to run codes for:
+  - Function starting the quiz,
+  - Function for starting the timer that will decrement the time and display the countdown of seconds in the 'timerElement'
+  - Function to display the questions 
+  - Function to validate the answer 
+  - Function to end the quiz
+  - Function for localStorage  
+

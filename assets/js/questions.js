@@ -1,6 +1,6 @@
 
 
-        // CREDIT: Code snipt obtained from https://simplestepscode.com/javascript-quiz-tutorial/
+        // CREDIT: Code snippet obtained from https://simplestepscode.com/javascript-quiz-tutorial/
         var myQuestions = [
             {
                 question: "What does the typeof operator in JavaScript return for this code: 'typeof 42'; ?",
