@@ -32,7 +32,7 @@
         const feedbackElement = document.getElementById("feedback");
 
         let currentQuestionIndex = 0;
-        let timeLeft = 10;
+        let timeLeft = 5;
         let timerInterval;
                 
         // Function to start the quiz
@@ -54,15 +54,22 @@
         timerInterval = setInterval(function () {
         timeLeft--;
         timerElement.textContent = timeLeft;
-        
+
         console.log(timeLeft);// validate that the timer countdown works
 
         if (timeLeft === 0) {
             endQuiz();
         }
         }, 1000);
-    }
-                startQuiz();
+        }
+
+        // Function to end the quiz
+        function endQuiz() 
+        {
+        clearInterval(timerInterval);// clear timer if any time left
+        }
+        
+        startQuiz();
         });
 
 

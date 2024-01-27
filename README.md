@@ -45,6 +45,7 @@ HUGE credit to W3C school, classes recording AND ChatGPT for many and different 
 3.  Create functions to run codes for:
   - Function starting the quiz, 🙌
   - Function for starting the timer that will decrement the time and display the countdown of seconds in the 'timerElement' 🙌
+  - Function that will end the quiz and claer timer if any time left 🙌
   - Function to display the questions 
   - Function to validate the answer 
   - Function to end the quiz
