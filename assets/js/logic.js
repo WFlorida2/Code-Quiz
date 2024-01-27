@@ -69,14 +69,18 @@
         clearInterval(timerInterval);
         questionsContainer.classList.add("hide");
         endScreen.classList.remove("hide");
-        finalScoreElement.textContent = 50;
+        finalScoreElement.textContent = timeLeft;
         // console.log(timeLeft);
-
         submitButton.addEventListener("click", function () 
         {
         const initials = initialsInput.value.trim();
-        });
+
+        if (initials !== "") 
+        {
+        console.log("Score saved:", timeLeft, "Initials:", initials);
+        }});
         }
+        
         startQuiz();
         });
 
