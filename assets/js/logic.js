@@ -2,6 +2,7 @@
         document.addEventListener("DOMContentLoaded", function () {
 
             // Get references to various HTML elements by their IDs
+            // and store them in corresponding variables
 
             // Element to display the timer during the quiz
             var timerElement = document.getElementById("time");
