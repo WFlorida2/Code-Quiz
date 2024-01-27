@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en-gb">
   <head>
+    <!-- Document metadata, character set, viewport settings, and compatibility mode -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    
+    <!-- Page title -->
     <title>Coding Quiz</title>
 
+    <!-- Link to external stylesheet for styling -->
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
 
   <body>
+    <!-- Display highscores link -->
     <div class="scores"><a href="./highscores.html">View Highscores</a></div>
 
+    <!-- Timer display -->
     <div class="timer">Time: <span id="time">0</span></div>
 
+    <!-- Main content wrapper -->
     <div class="wrapper">
+      
+      <!-- Start screen with quiz instructions and start button -->
       <div id="start-screen" class="start">
         <h1>Coding Quiz Challenge</h1>
         <p>
@@ -25,11 +34,13 @@
         <button id="start">Start Quiz</button>
       </div>
 
+      <!-- Question container (hidden initially) -->
       <div id="questions" class="hide">
         <h2 id="question-title"></h2>
         <div id="choices" class="choices"></div>
       </div>
 
+      <!-- End screen with final score input and submit button (hidden initially) -->
       <div id="end-screen" class="hide">
         <h2>All done!</h2>
         <p>Your final score is <span id="final-score"></span>.</p>
@@ -39,9 +50,12 @@
         </p>
       </div>
 
+      <!-- Feedback display (hidden initially) -->
       <div id="feedback" class="feedback hide"></div>
     </div>
 
+    <!-- Include the JavaScript file for quiz logic -->
     <script src="./assets/js/logic.js"></script>
   </body>
 </html>
+
