@@ -1,89 +1,121 @@
-    // Execute full code when the DOM has fully loaded
-    document.addEventListener("DOMContentLoaded", function () {
 
-    // Get references to constious HTML elements by their IDs
-    // and store them in corresponding constiables
+document.addEventListener("DOMContentLoaded", function () {
+    const timerElement = document.getElementById("time");
+    const startButton = document.getElementById("start");
+    const questionsContainer = document.getElementById("questions");
+    const choicesContainer = document.getElementById("choices");
+    const endScreen = document.getElementById("end-screen");
+    const finalScoreElement = document.getElementById("final-score");
+    const initialsInput = document.getElementById("initials");
+    const submitButton = document.getElementById("submit");
+    const feedbackElement = document.getElementById("feedback");
 
-    // Element to display the timer during the quiz
-        const timerElement = document.getElementById("time");
-                    
-        // Start button
-        const startButton = document.getElementById("start");
-                
-        // Container for displaying questions during the quiz
-        const questionsContainer = document.getElementById("questions");
-                
-        // Container for displaying answer choices during the quiz
-        const choicesContainer = document.getElementById("choices");
-                
-        // Container for displaying the end screen (after completing the quiz)
-        const endScreen = document.getElementById("end-screen");
-                
-        // Element to display the final score on the end screen
-        const finalScoreElement = document.getElementById("final-score");
-                
-        // Input field for entering initials on the end screen
-        const initialsInput = document.getElementById("initials");
-                
-        // Button to submit the quiz and initials on the end screen
-        const submitButton = document.getElementById("submit");
-                
-        // Element to display feedback messages during the quiz
-        const feedbackElement = document.getElementById("feedback");
+    let currentQuestionIndex = 0;
+    let timeLeft = 15;
+    let timerInterval;
+    let quizEnded = false;
 
-        let currentQuestionIndex = 0;
-        let timeLeft = 5;
-        let timerInterval;
-                
-        // Function to start the quiz
-        function startQuiz() {
-        console.log("Page loaded before Start Quiz button is clicked");// startQuiz function is called
-                        
+    const questions = [
+        {
+            question: "What does the typeof operator in JavaScript return for this code: 'typeof 42'; ?",
+            choices: ["number", 
+                        "string", 
+                        "boolean", 
+                        "undefined"
+                    ],
+            correctAnswer: "number"
+        },
+        {
+            question: "Which of the following is the correct way to declare a function in JavaScript ?",
+            choices: ["function = myFunction() {}",
+                        "var myFunction = function() {}",
+                        "def myFunction() {}",
+                        "function myFunction() {}"
+                    ],
+            correctAnswer: "function myFunction() {}"
+        },
+        {
+            question: "What does the typeof operator return for the data type 'null'?",
+            choices: ["object", "null", "undefined", "string"],
+            correctAnswer: "object"
+        },
+    ];
+    
+    function startQuiz() {
+        console.log("Page loaded before Start Quiz button is clicked");
         startButton.addEventListener("click", function () {
-        console.log("Start button is now clicked");// EventListner is responding
-                        
-        startButton.parentElement.classList.add("hide");
-        questionsContainer.classList.remove("hide");
-        startTimer();
-        // displayQuestion();
+            console.log("Start button is now clicked");
+            startButton.parentElement.classList.add("hide");
+            questionsContainer.classList.remove("hide");
+            startTimer();
+            displayQuestion();
         });
-        }
+    }
 
-         // Function to start the timer
-        function startTimer() {
+    function startTimer() {
         timerInterval = setInterval(function () {
-        timeLeft--;
-        timerElement.textContent = timeLeft;
+            timeLeft--;
+            timerElement.textContent = timeLeft;
 
-        console.log(timeLeft);// validate that the timer countdown works
+            console.log(timeLeft);
 
-        if (timeLeft === 0) {
+            if (timeLeft <= 0 && !quizEnded) {
+                endQuiz();
+            }
+        }, 1000);
+    }
+
+    function displayQuestion() {
+        const currentQuestion = questions[currentQuestionIndex];
+
+        if (currentQuestionIndex < questions.length) {
+            document.getElementById("question-title").textContent = currentQuestion.question;
+            choicesContainer.innerHTML = "";
+
+            for (let i = 0; i < currentQuestion.choices.length; i++) {
+                const choiceButton = document.createElement("button");
+                choiceButton.textContent = currentQuestion.choices[i];
+                choiceButton.addEventListener("click", function () {
+                    checkAnswer(this.textContent);
+                });
+
+                choicesContainer.appendChild(choiceButton);
+            }
+        } else {
             endQuiz();
         }
-        }, 1000);
+    }
+
+    function checkAnswer(selectedAnswer) {
+        const currentQuestion = questions[currentQuestionIndex];
+
+        if (selectedAnswer === currentQuestion.correctAnswer) {
+            feedbackElement.textContent = "Correct!";
+        } else {
+            feedbackElement.textContent = "Incorrect!";
+            timeLeft -= 10;
         }
 
-        // Function to end the quiz
-        function endQuiz() 
-        {
+        currentQuestionIndex++;
+        displayQuestion();
+    }
+
+    function endQuiz() {
+        quizEnded = true; // Set the flag to true to indicate that the quiz has ended
         clearInterval(timerInterval);
         questionsContainer.classList.add("hide");
         endScreen.classList.remove("hide");
-        finalScoreElement.textContent = timeLeft;
-        // console.log(timeLeft);
-        submitButton.addEventListener("click", function () 
-        {
-        const initials = initialsInput.value.trim();
+        finalScoreElement.textContent = Math.max(0, timeLeft);
 
-        if (initials !== "") 
-        {
-        console.log("Score saved:", timeLeft, "Initials:", initials);
-        }});
-        }
-        
-        startQuiz();
+        submitButton.addEventListener("click", function () {
+            const initials = initialsInput.value.trim();
+
+            if (initials !== "") {
+                console.log("Score saved:", timeLeft, "Initials:", initials);
+            }
         });
+    }
 
-
-        
+    startQuiz();
+});
 
