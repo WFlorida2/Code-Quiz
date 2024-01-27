@@ -1,6 +1,6 @@
-    # Code-Quiz
+# Code-Quiz
 
-    ## pseudocode
+## pseudocode
 
     1. Declare variables:
     - timer , score , highscore
