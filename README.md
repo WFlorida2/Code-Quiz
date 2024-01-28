@@ -12,6 +12,8 @@ DOM manipulation, advanced JavaScript that feature dynamically updated HTML and 
 •	draw.io
 
 # CREDIT:
+Please Note: I have learned so much during implementing this challenge given my early stages of developments with the huge aid of the following contributors: 
+
 - ChatGPT: https://chat.openai.com/
 * How to create an array of questions and displaying them using a JS function?
 * How to create a function to start a quiz?
