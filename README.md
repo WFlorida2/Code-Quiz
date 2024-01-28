@@ -6,7 +6,7 @@ This challenge will create a simple and timed, multiple-choice coding quiz that 
 
 DOM manipulation, advanced JavaScript that feature dynamically updated HTML and CSS powered by JavaScript code.
 
-## Deployed URL : 
+## Deployed URL : https://wflorida2.github.io/Code-Quiz/
 
 ## Wireframe tool used:
 •	draw.io
@@ -35,8 +35,8 @@ DOM manipulation, advanced JavaScript that feature dynamically updated HTML and 
 •	Classes recordings, activities and notes
 
 ## Installation:
-•	To access the webpage, the following URL should be used:    “  ”. Once accessed, start the quiz by clicking on the ' Start Quiz" button.      
-•	As a developer who wishes to access the back-end files for this page, you will need to access GitHub to be able to open the repo via the following link: "   "    
+•	To access the webpage, the following URL should be used:    “ https://wflorida2.github.io/Code-Quiz/ ”. Once accessed, start the quiz by clicking on the ' Start Quiz" button.      
+•	As a developer who wishes to access the back-end files for this page, you will need to access GitHub to be able to open the repo via the following link: " https://github.com/WFlorida2/Code-Quiz  "    
 
 ## Pseudocode:
 
