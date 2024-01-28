@@ -1,5 +1,46 @@
 # Code-Quiz
-HUGE credit to W3C school, classes recording AND ChatGPT for many and different examples of codes
+
+This challenge will create a simple and timed, multiple-choice coding quiz that can keep track of high scores and quiz-takers' initials.
+
+## Skills used / learned :
+
+DOM manipulation, advanced JavaScript that feature dynamically updated HTML and CSS powered by JavaScript code.
+
+## Deployed URL : 
+
+## Wireframe tool used:
+•	draw.io
+
+# CREDIT:
+- ChatGPT: https://chat.openai.com/
+* How to create an array of questions and displaying them using a JS function?
+* How to create a function to start a quiz?
+* How to create a function for startTime the is decrementing as the time goes by
+* How to validate answers to questions with a function in JS?
+* How to save scores to local storage and display them in highscore.html?
+
+- Classes recording :
+* Functions and variables creations
+* DOM explanation
+* Timers settings
+
+•	Full credit to students on the Discord group of helping each other’s out with couple of issues.
+•	W3School 
+
+
+## Resources:
+•	W3School
+•	ChatGPT
+•	Google search engines
+•	Classes recordings, activities and notes
+
+## Installation:
+•	To access the webpage, the following URL should be used:    “  ”. Once accessed, start the quiz by clicking on the ' Start Quiz" button.      
+•	As a developer who wishes to access the back-end files for this page, you will need to access GitHub to be able to open the repo via the following link: "   "    
+
+## Pseudocode:
+
+### Below is a pseudo code outlining the requirements:
 
 ## pseudocode
 
@@ -50,4 +91,28 @@ HUGE credit to W3C school, classes recording AND ChatGPT for many and different 
   - Function to validate the answer
   - Function to end the quiz
   - Function for localStorage  
+   
+   ### End results:
+
+   ![Hig level overview of the flow](assets/images/Hig level overview of the flow.png)
+   ![Expected results](assets/images/1 and 5.png)
+   ![Expected results](assets/images/2.png)
+   ![Expected results](assets/images/3.png)
+   ![Expected results](assets/images/4.png)
+   ![Expected results](assets/images/6.png)
+   ![Expected results](assets/images/7.png)
+   ![End result](assets/images/8.png)
+   ![End result](assets/images/9.png)
+   ![End result](assets/images/10.png)
+   ![End result](assets/images/11.png)
+   ![End result](assets/images/12.png)
+   ![End result](assets/images/13.png)
+   ![End result](assets/images/14.png)
+   ![End result](assets/images/15.png)
+ 
+
+
+
+
+
 
